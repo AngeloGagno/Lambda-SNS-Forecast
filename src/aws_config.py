@@ -1,6 +1,6 @@
 import boto3
 
-def sns_config(message,subject,topic_name,aws_access_key_id,aws_secret_access_key,region_name):
+def sns_config(message:str,subject:str,topic_name:str,aws_access_key_id:str,aws_secret_access_key:str,region_name:str) -> None:
     try:
         sns = boto3.client('sns', aws_access_key_id=aws_access_key_id,aws_secret_access_key=aws_secret_access_key,region_name=region_name)
         response = sns.publish(

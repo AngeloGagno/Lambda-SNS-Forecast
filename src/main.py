@@ -4,7 +4,7 @@ from extractor import fetch_api
 from utils import get_lat_long,formated_date
 import os
 
-def filtered_data():
+def filtered_data() -> list[dict]:
     lat,long = get_lat_long()
     json_request = fetch_api(lat=lat,long=long)
     return transform_pipeline(json_request)

@@ -7,19 +7,19 @@ def filter_workdays(workdays:list) -> bool:
         return True
     else: return False
 
-def filter_raindays(rain_amount):
+def filter_raindays(rain_amount:float) -> bool:
     if rain_amount >= 0.5:
         return True
     else: return False
 
-def filter_cold_temperature(temperature):
+def filter_cold_temperature(temperature:float) -> bool:
     if temperature <= 18.0:
         return True
     else: return False
 
-def get_lat_long():
+def get_lat_long() -> float:
     _ = load_dotenv(override=True)
     return os.getenv('lat'),os.getenv('long')
 
-def formated_date():
+def formated_date() -> str:
     return datetime.now().strftime(r'%d/%m/%Y')

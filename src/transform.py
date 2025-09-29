@@ -24,7 +24,7 @@ def filter_workhours(data:list[dict],begin_work:int,leave_work:int) ->list[dict]
 
     return filtered_list
 
-def get_rain(data:list[dict]):
+def get_rain(data:list[dict]) -> bool:
     rain_amount = [rain['rain'] for rain in data]
     max_rain = sorted(rain_amount)[0]
     return filter_raindays(max_rain) 
