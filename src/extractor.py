@@ -16,7 +16,6 @@ def fetch_api(lat: float, long: float, forecast_days: int = 1, timezone: str = '
 
     
     url = f"{base_url}?{urlencode(params, encoding='utf-8', quote_via=quote, safe=',/')}"
-    print(url)
 
     with urllib.request.urlopen(url) as response:
         data = json.loads(response.read().decode())
