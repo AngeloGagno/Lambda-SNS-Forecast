@@ -8,7 +8,8 @@ Este projeto publica mensagens em um **tópico SNS** com base em dados de previs
 Ele pode ser executado **localmente** (interpretador Python) ou em uma **AWS Lambda** acionada por uma regra do **EventBridge**.
 
 ---
-
+## Esquema do Projeto
+![alt text](image.png)
 ## Como fazer o setup do projeto
 
 ### Pré-requisitos
